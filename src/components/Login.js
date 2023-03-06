@@ -1,4 +1,7 @@
 import { Form, Button } from "react-bootstrap";
+
+import { Link } from "react-router-dom";
+
 import GoogleButton from "react-google-button";
 
 const Login = () => {
@@ -27,7 +30,7 @@ const Login = () => {
         </div>
       </div>
       <div className="p-4 box mt-3 text-center">
-        Don't have an account? Sign up
+        Don't have an account? <Link to="/signup">Sign up</Link>
       </div>
     </>
   );
