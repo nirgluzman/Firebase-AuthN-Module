@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
-
 import { Link, useNavigate } from "react-router-dom";
+
+import { Form, Button, Alert } from "react-bootstrap";
 
 import { useUserAuth } from "../context/UserAuthContext";
 
@@ -31,6 +31,7 @@ const Signup = () => {
       <div className="p-4 box">
         <h2 className="mb-3">Firebase Auth Signup</h2>
         {error && <Alert variant="danger">{error}</Alert>}
+
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Control
