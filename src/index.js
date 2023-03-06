@@ -5,10 +5,13 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BrowserRouter } from "react-router-dom";
+import { UserAuthContextProvider } from "./context/UserAuthContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <App />
+    <UserAuthContextProvider>
+      <App />
+    </UserAuthContextProvider>
   </BrowserRouter>
 );
