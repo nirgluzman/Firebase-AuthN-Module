@@ -27,6 +27,17 @@ const Login = () => {
     }
   };
 
+  const handleGoogleSignin = async () => {
+    setError("");
+    try {
+      await googleSignIn();
+      navigate("/home");
+    } catch (err) {
+      console.log(err);
+      setError(err.message);
+    }
+  };
+
   return (
     <>
       <div className="p-4 box">
@@ -58,7 +69,11 @@ const Login = () => {
         </Form>
         <hr />
         <div>
-          <GoogleButton className="g-btn" type="dark" />
+          <GoogleButton
+            className="g-btn"
+            type="dark"
+            onClick={handleGoogleSignin}
+          />
         </div>
       </div>
       <div className="p-4 box mt-3 text-center">
